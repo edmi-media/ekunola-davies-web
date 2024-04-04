@@ -31,6 +31,7 @@ export function useSSR() {
 	const isInSSRContext = ctx !== defaultSSRCOntextProps
 	const [isHydrating, seIsHydrating] = useState(canUseDOM && isInSSRContext)
 	if (canUseDOM) {
+		// eslint-disable-next-line react-hooks/rules-of-hooks
 		useLayoutEffect(() => seIsHydrating(false), [])
 	}
 

@@ -1,0 +1,8 @@
+@import "./base/font";
+@import "./base/normalize";
+@import "./base/theme";
+@import "./base/utils";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

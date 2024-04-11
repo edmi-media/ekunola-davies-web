@@ -1,10 +1,12 @@
 import Image from "next/image"
 import React from "react"
 
+import styles from "./appbar.module.scss"
+
 export const Appbar = () => {
 	return (
-		<nav className="flex w-full items-center justify-between">
-			<div className="relative aspect-[3.2/1] w-[80px] lg:w-[150px]">
+		<nav className={styles.Appbar}>
+			<div className={styles.AppbarLogo}>
 				<Image
 					src="/images/logo-dark.png"
 					alt="edmi logo"
@@ -14,6 +16,7 @@ export const Appbar = () => {
 					priority
 				/>
 			</div>
+			<div className={styles.AppbarList}></div>
 		</nav>
 	)
 }

@@ -1,0 +1,12 @@
+@use "@/styles/base/utils" as *;
+
+.Main {
+	width: 100%;
+	padding: 20px 0;
+}
+
+@media screen and (max-width: 1024px) {
+	.Main {
+		padding: 40px 0;
+	}
+}

@@ -1,0 +1,22 @@
+@use "@/styles/base/utils" as *;
+
+.Appbar {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 0;
+	border-bottom: 1px solid #cfcfcf;
+
+	.AppbarLogo {
+		position: relative;
+		aspect-ratio: 3/1;
+		width: 100px;
+	}
+
+	.AppbarList {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+}

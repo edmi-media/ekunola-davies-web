@@ -37,7 +37,7 @@ export function Seo({
 					name="keywords"
 					content="teaching, deliverance, revival, religious organization, interdenominatonal ministry, school of ministry"
 				/>
-				<meta name="author" content="BetterCareer" />
+				<meta name="author" content="Ekunola Davies Ministry Int'l" />
 				<link rel="canonical" href="https://ekunoladavies.org/" />
 
 				<meta key="og_type" property="og:type" content={ogType} />
@@ -53,12 +53,12 @@ export function Seo({
 				<meta key="og_image:height" property="og:image:height" content="630" />
 
 				<meta name="robots" content="index,follow" />
-				<meta name="apple-mobile-web-app-title" content="BetterCareer" />
-				<meta name="keywords" content="BetterCareer" />
+				<meta name="apple-mobile-web-app-title" content="Ekunola Davies Ministry Int'l" />
+				<meta name="keywords" content="Ekunola Davies Ministry Int'l" />
 				<meta name="mobile-web-app-capable" content="yes" />
 				<meta content="IE=edge" httpEquiv="X-UA-Compatible" />
-				<meta content="#171717" name="theme-color" />
-				<meta content="#171717" name="msapplication-TileColor" />
+				<meta content="#10dfe1" name="theme-color" />
+				<meta content="#23385e" name="msapplication-TileColor" />
 
 				<meta key="twitter:card" name="twitter:card" content="summary_large_image" />
 				<meta key="twitter:title" property="twitter:title" content={title} />
@@ -84,16 +84,16 @@ export function Seo({
                 ${JSON.stringify({
 																	"@context": "http://schema.org",
 																	"@type": "WebApplication",
-																	name: "BetterCareer",
+																	name: "Ekunola Davies Ministry Int'l",
 																	url: "https://ekunoladavies.org/",
 																	applicationCategory: "ReligiousOrganization",
 																	operatingSystem: "Any",
 																	description: "",
 																	features: "",
-																	screenshot: "https://ekunoladavies.org/images/screenshot.jpg",
+																	screenshot: "https://ekunoladavies.org/meta/screenshot.png",
 																	creator: {
 																		"@type": "Organization",
-																		name: "Ekunola Davies",
+																		name: "Ekunola Davies Ministry Int'l",
 																		url: "https://ekunoladavies.org/",
 																	},
 																})}

@@ -2,6 +2,49 @@
 
 .Footer {
 	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	background: var(--primary-blue);
 	padding: 40px 0;
+	color: var(--text-white);
+
+	.FooterInner {
+		width: 100%;
+		max-width: 1200px;
+
+		.FooterMain {
+			width: 100%;
+		}
+
+		.FooterFoot {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-size: 14px;
+
+			.FooterIconList {
+				display: flex;
+				align-items: center;
+				gap: 20px;
+
+				.FooterIconListItem {
+					color: var(--text-white);
+					transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1) ease-in-out;
+
+					&:hover {
+						color: var(--primary-teal);
+						transform: scale(1.02);
+					}
+				}
+			}
+		}
+
+		.FooterHr {
+			width: 100%;
+			margin: 20px 0;
+			border-color: var(--primary-white);
+		}
+	}
 }

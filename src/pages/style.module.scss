@@ -2,11 +2,49 @@
 
 .Main {
 	width: 100%;
-	padding: 20px 0;
-}
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 
-@media screen and (max-width: 1024px) {
-	.Main {
-		padding: 40px 0;
+	.MainHero {
+		width: 100%;
+		min-height: 100dvh;
+		display: grid;
+		place-items: center;
+		mix-blend-mode: multiply;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		@apply bg-hero bg-black/40 bg-blend-multiply;
+
+		.MainHeroHeading {
+			font-size: 120px;
+			line-height: 120px;
+			text-align: center;
+			max-width: 1320px;
+			color: var(--text-white);
+		}
+	}
+
+	.MainSectionWrapper {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 20px 0;
+		background: var(--primary-white);
+		color: var(--text-black);
+
+		.MainSection {
+			width: 100%;
+			max-width: 1200px;
+			align-items: center;
+			gap: 26px;
+		}
+
+		@media screen and (min-width: 1024px) {
+			padding: 40px 0;
+		}
 	}
 }

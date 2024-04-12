@@ -10,6 +10,9 @@ const config = {
 	],
 	prefix: "",
 	theme: {
+		backgroundImage: {
+			hero: "url('/images/hero.jpg')",
+		},
 		container: {
 			center: true,
 			padding: "2rem",

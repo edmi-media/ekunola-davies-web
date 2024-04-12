@@ -15,6 +15,48 @@
 
 		.FooterMain {
 			width: 100%;
+			display: flex;
+			align-items: start;
+			justify-content: space-between;
+			flex-wrap: wrap;
+
+			@include media("sm", "max") {
+				padding: 0 16px;
+				flex-direction: column;
+			}
+
+			.FooterImageWrapper {
+				width: 100%;
+				max-width: 500px;
+
+				.FooterImage {
+					position: relative;
+					width: 300px;
+					aspect-ratio: 3/1;
+
+					@include media("sm", "max") {
+						width: 200px;
+					}
+
+					&img {
+						object-fit: cover;
+					}
+				}
+			}
+
+			.FooterNav {
+				width: 100%;
+				display: flex;
+				align-items: start;
+				flex-wrap: wrap;
+				gap: 40px;
+
+				.FooterNavList {
+					.FooterNavListItem {
+						font-size: 14px;
+					}
+				}
+			}
 		}
 
 		.FooterFoot {
@@ -23,6 +65,12 @@
 			align-items: center;
 			justify-content: space-between;
 			font-size: 14px;
+
+			@include media("sm", "max") {
+				flex-direction: column;
+				justify-content: center;
+				gap: 16px;
+			}
 
 			.FooterIconList {
 				display: flex;
@@ -35,7 +83,7 @@
 
 					&:hover {
 						color: var(--primary-teal);
-						transform: scale(1.02);
+						transform: scale(1.2);
 					}
 				}
 			}
@@ -43,7 +91,7 @@
 
 		.FooterHr {
 			width: 100%;
-			margin: 20px 0;
+			margin: 40px 0;
 			border-color: var(--primary-white);
 		}
 	}

@@ -24,6 +24,11 @@
 			text-align: center;
 			max-width: 1320px;
 			color: var(--text-white);
+
+			@include media("sm", "max") {
+				font-size: 68px;
+				line-height: 68px;
+			}
 		}
 	}
 
@@ -32,19 +37,33 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 20px 0;
-		background: var(--primary-white);
-		color: var(--text-black);
+		padding: 40px 0;
 
 		.MainSection {
 			width: 100%;
 			max-width: 1200px;
-			align-items: center;
-			gap: 26px;
+			padding: 0;
+
+			&--1 {
+				align-items: center;
+				color: var(--text-black);
+				gap: 26px;
+				text-align: center;
+
+				&h2 {
+					@include media("sm", "max") {
+						font-size: 28px;
+					}
+				}
+			}
+
+			@include media("sm", "max") {
+				padding: 0 16px;
+			}
 		}
 
-		@media screen and (min-width: 1024px) {
-			padding: 40px 0;
+		@include media("sm", "max") {
+			padding: 20px 0;
 		}
 	}
 }

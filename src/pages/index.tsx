@@ -1,6 +1,6 @@
-import Image from "next/image"
+import classNames from "classnames"
 
-import { Container, Flex, Heading, Seo, Text } from "@/components/shared"
+import { Flex, Heading, Seo, Text } from "@/components/shared"
 import { DefaultLayout } from "./layout"
 
 import styles from "./style.module.scss"
@@ -17,9 +17,9 @@ export default function Home() {
 						</Heading.h1>
 					</div>
 					<Flex className={styles.MainSectionWrapper}>
-						<Flex.Column className={styles.MainSection}>
+						<Flex.Column className={classNames(styles.MainSection, styles[`MainSection--1`])}>
 							<Heading.h2 casing="capitalize">ekunola davies ministry int&apos;l</Heading.h2>
-							<Text fontSize="24px" align="center">
+							<Text fontSize="20px" align="center">
 								Ekunola Davies Ministry Int&apos;l, also known as Genesis Team Int&apos;l is an
 								evangelistic ministry born into Celestial Church of Christ through the call of God
 								upon His anointed vessel, Evangelist Ekunola Davies in the year 2001. Over the

@@ -4,19 +4,82 @@
 	width: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	padding: 20px 0;
-	border-bottom: 1px solid #cfcfcf;
+	border-bottom: 1px solid var(--primary-blue);
+	position: static;
+	top: 0;
+	left: 0;
+	z-index: 30 !important;
+	transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1) ease-in-out;
 
-	.AppbarLogo {
-		position: relative;
-		aspect-ratio: 3/1;
-		width: 100px;
+	&--true {
+		position: fixed;
+		background: var(--primary-white);
 	}
 
-	.AppbarList {
+	.AppbarInner {
+		width: 100%;
+		max-width: 1200px;
 		display: flex;
 		align-items: center;
-		gap: 20px;
+		justify-content: space-between;
+
+		@include media("sm", "max") {
+			padding: 0 16px;
+		}
+
+		.AppbarLogo {
+			position: relative;
+			aspect-ratio: 3/1;
+			width: 150px;
+
+			@include media("sm", "max") {
+				width: 100px;
+			}
+		}
+
+		.AppbarList {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+
+			@include media("sm", "max") {
+				display: none;
+			}
+
+			.AppbarListItem {
+				color: var(--primary-blue);
+				text-transform: capitalize;
+				position: relative;
+				width: fit-content;
+				font-weight: 600;
+
+				&--true {
+					color: var(--primary-teal);
+				}
+
+				&::before {
+					content: "";
+					position: absolute;
+					bottom: -2px;
+					right: 0;
+					width: 0;
+					height: 2px;
+					background: var(--primary-blue);
+					transition: width 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+					-moz-transition: width 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+					-webkit-transition: width 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+				}
+
+				@media (hover: hover) and (pointer: fine) {
+					&:hover::before {
+						left: 0;
+						right: auto;
+						width: 100%;
+					}
+				}
+			}
+		}
 	}
 }

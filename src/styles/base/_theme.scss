@@ -1,5 +1,7 @@
-/** BC Theme Variables */
+/** EDMI Theme Variables */
 @use "utils" as style;
+
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 
 :root {
 	/* Font Typeface */
@@ -40,7 +42,7 @@
 	--soft-black: #16013c;
 
 	/** Layout */
-	--bc-labs-vh: 100vh;
+	--edmi-labs-vh: 100vh;
 	--nav-height: 78.8px;
 }
 
@@ -84,7 +86,7 @@
 
 @supports (height: 100dvh) {
 	:root {
-		--bc-labs-vh: 100dvh;
+		--edmi-labs-vh: 100dvh;
 	}
 }
 
@@ -136,7 +138,7 @@ body {
 	/* 1 */
 	line-height: inherit;
 	/* 2 */
-	height: var(--bc-labs-vh);
+	height: var(--edmi-labs-vh);
 	color: var(--text-black);
 	background-color: var(--primary-white);
 	-webkit-text-size-adjust: 100%;
@@ -218,22 +220,6 @@ Add the correct font weight in Edge and Safari.
 b,
 strong {
 	font-weight: bolder;
-}
-
-/*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
-*/
-
-code,
-kbd,
-samp,
-pre {
-	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-		"Courier New", monospace;
-	/* 1 */
-	font-size: 1em;
-	/* 2 */
 }
 
 /*
@@ -349,6 +335,11 @@ Add the correct vertical alignment in Chrome and Firefox.
 
 progress {
 	vertical-align: baseline;
+}
+
+/*- Removes scrollbar on horizontal scroll. */
+::-webkit-scrollbar {
+	width: 0;
 }
 
 /*

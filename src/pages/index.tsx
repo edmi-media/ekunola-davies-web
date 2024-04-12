@@ -1,7 +1,7 @@
 import classNames from "classnames"
 
 import { Flex, Heading, Seo, Text } from "@/components/shared"
-import { DefaultLayout } from "./layout"
+import DefaultLayout from "./layout"
 
 import styles from "./style.module.scss"
 

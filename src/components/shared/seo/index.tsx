@@ -18,7 +18,7 @@ interface SeoProps {
 
 export function Seo({
 	title = "",
-	description = "We are an evangelistic ministry",
+	description = "We are an evangelistic ministry born into Celestial Church of Christ saddled with the vision of raising champions that will reign with Jesus Christ on earth and in heaven",
 	siteName = "Ekunola Davies Ministry Int'l",
 	canonical = APP_URL,
 	ogImage = DEFAULT_OG_IMAGE,
@@ -88,7 +88,7 @@ export function Seo({
 																	url: "https://ekunoladavies.org/",
 																	applicationCategory: "ReligiousOrganization",
 																	operatingSystem: "Any",
-																	description: "",
+																	description: description,
 																	features: "",
 																	screenshot: "https://ekunoladavies.org/meta/screenshot.png",
 																	creator: {

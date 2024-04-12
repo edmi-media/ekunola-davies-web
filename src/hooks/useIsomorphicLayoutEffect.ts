@@ -1,4 +1,4 @@
-import { useLayoutEffect } from 'react';
+import { useLayoutEffect } from "react"
 
 /**
  * @name useIsomorphicLayoutEffect
@@ -21,7 +21,7 @@ import { useLayoutEffect } from 'react';
  * }, []);
  */
 export const useIsomorphicLayoutEffect: typeof useLayoutEffect = (...args) => {
-	const isServer = typeof window === 'undefined' || !window.document;
+	const isServer = typeof window === "undefined" || !window.document
 	// eslint-disable-next-line react-hooks/rules-of-hooks, react-hooks/exhaustive-deps
-	return isServer ? () => {} : useLayoutEffect(...args);
-};
+	return isServer ? () => {} : useLayoutEffect(...args)
+}

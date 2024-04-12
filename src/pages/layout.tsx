@@ -6,7 +6,7 @@ interface Props {
 	children: React.ReactNode
 }
 
-export const DefaultLayout = ({ children }: Props) => {
+export default function DefaultLayout({ children }: Props) {
 	return (
 		<>
 			<Appbar />

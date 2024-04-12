@@ -7,9 +7,9 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"prettier:write": "prettier --write .",
-		"prettier:check": "prettier --check .",
-		"check-code": "yarn prettier:check && yarn lint"
+		"prettier:write": "prettier --write ./src/**/*.{ts,tsx}",
+		"prettier:check": "prettier --check ./src/**/*.{ts,tsx}",
+		"check-code": "npm run prettier:check && npm run lint"
 	},
 	"dependencies": {
 		"@radix-ui/react-dialog": "^1.0.5",

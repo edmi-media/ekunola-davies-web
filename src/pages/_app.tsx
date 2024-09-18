@@ -1,10 +1,10 @@
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
 import type { AppProps } from "next/app"
 import { useRouter } from "next/router"
 import { useEffect } from "react"
 
 import { QueryQrovider, SSRPRovider } from "@/components/providers"
-import "@/styles/index.scss"
+import { Toaster } from "@/components/ui/sonner"
+import "@/styles/globals.css"
 
 export default function App({ Component, pageProps }: AppProps) {
 	const router = useRouter()
@@ -24,8 +24,8 @@ export default function App({ Component, pageProps }: AppProps) {
 		<QueryQrovider>
 			<SSRPRovider>
 				<Component {...pageProps} />
+				<Toaster position="top-right" />
 			</SSRPRovider>
-			<ReactQueryDevtools initialIsOpen={false} />
 		</QueryQrovider>
 	)
 }

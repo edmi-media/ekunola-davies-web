@@ -1,0 +1,22 @@
+{
+	"name": "Ekunola Davies Ministry Int'l",
+	"short_name": "Ekunola Davies Ministry Int'l",
+	"description": "We are an evangelistic ministry born into Celestial Church of Christ saddled with the vision of raising champions that will reign with Jesus Christ on earth and in heaven.",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "/meta/android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/meta/android-chrome-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"screenshots": [{ "src": "/meta/screenshot.png" }],
+	"background_color": "#10dfe1",
+	"theme_color": "#fbfbfb",
+	"display": "standalone"
+}

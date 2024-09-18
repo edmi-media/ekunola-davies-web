@@ -11,7 +11,11 @@ const config = {
 	prefix: "",
 	theme: {
 		backgroundImage: {
-			hero: "url('/images/hero.jpg')",
+			"auditorium-1": "url('/assets/images/auditorium-1.webp')",
+			"auditorium-2": "url('/assets/images/auditorium-2.webp')",
+			"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+			"gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+			hero: "url('/assets/images/hero.jpg')",
 		},
 		container: {
 			center: true,
@@ -20,46 +24,40 @@ const config = {
 				"2xl": "1400px",
 			},
 		},
+		fontFamily: {
+			heading: ["var(--heading)"],
+			body: ["var(--body)"],
+		},
 		extend: {
 			colors: {
-				border: "hsl(var(--border))",
-				input: "hsl(var(--input))",
-				ring: "hsl(var(--ring))",
-				background: "hsl(var(--background))",
-				foreground: "hsl(var(--foreground))",
-				primary: {
-					DEFAULT: "hsl(var(--primary))",
-					foreground: "hsl(var(--primary-foreground))",
+				"primary-teal": "#10dfe1",
+				"primary-blue": "#23385e",
+				"primary-white": "#fbfbfb",
+				neutral: {
+					"100": "#ffffff",
+					"200": "#f6f8fa",
+					"300": "#e2e4e9",
+					"400": "#cdd0d5",
+					"500": "#868c98",
+					"600": "#525866",
+					"700": "#31353f",
+					"800": "#161922",
+					"900": "#0a0d14",
 				},
-				secondary: {
-					DEFAULT: "hsl(var(--secondary))",
-					foreground: "hsl(var(--secondary-foreground))",
+				error: {
+					"100": "#fdedf0",
+					"200": "#f8c9d2",
+					"300": "#df1c41",
+					"400": "#af1d38",
+					"500": "#710e21",
 				},
-				destructive: {
-					DEFAULT: "hsl(var(--destructive))",
-					foreground: "hsl(var(--destructive-foreground))",
+				warning: {
+					"100": "#fef7ec",
+					"200": "#fbdfb1",
+					"300": "#f2ae40",
+					"400": "#b47818",
+					"500": "#693d11",
 				},
-				muted: {
-					DEFAULT: "hsl(var(--muted))",
-					foreground: "hsl(var(--muted-foreground))",
-				},
-				accent: {
-					DEFAULT: "hsl(var(--accent))",
-					foreground: "hsl(var(--accent-foreground))",
-				},
-				popover: {
-					DEFAULT: "hsl(var(--popover))",
-					foreground: "hsl(var(--popover-foreground))",
-				},
-				card: {
-					DEFAULT: "hsl(var(--card))",
-					foreground: "hsl(var(--card-foreground))",
-				},
-			},
-			borderRadius: {
-				lg: "var(--radius)",
-				md: "calc(var(--radius) - 2px)",
-				sm: "calc(var(--radius) - 4px)",
 			},
 			keyframes: {
 				"accordion-down": {

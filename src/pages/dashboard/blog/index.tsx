@@ -1,7 +1,7 @@
 import React from "react"
 
 const Blogs = () => {
-	return <main className={styles.Blog}>Blog</main>
+	return <main className="">Blog</main>
 }
 
 export default Blogs

@@ -40,7 +40,9 @@ export const Appbar = () => {
 						))}
 					</div>
 				</div>
-				<Button size="lg">Seed Sowing</Button>
+				<Link href="/seed-sowing">
+					<Button size="lg">Seed Sowing</Button>
+				</Link>
 			</div>
 		</nav>
 	)

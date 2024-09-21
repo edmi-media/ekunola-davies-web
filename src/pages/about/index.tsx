@@ -2,7 +2,7 @@ import React from "react"
 
 import { Appbar, Footer, Seo } from "@/components/shared"
 
-export default function Home() {
+export default function Page() {
 	return (
 		<>
 			<Seo title="About Us" />

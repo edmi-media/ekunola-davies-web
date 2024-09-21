@@ -2,7 +2,7 @@ import { NextURL } from "next/dist/server/web/next-url"
 import { NextRequest, NextResponse } from "next/server"
 
 export const config = {
-	matcher: ["/", "/auth/:path*", "/dashboard/:path*"],
+	matcher: ["/signin", "/dashboard/:path*"],
 	name: "middleware",
 }
 
@@ -24,8 +24,8 @@ export function middleware(req: NextRequest) {
 
 	// Redirect users without a token trying to access any dashboard/* path
 	if (!hasToken && url.pathname.startsWith("/dashboard")) {
-		url.pathname = "/auth/signin"
-		return redirectResponse(url)
+		url.pathname = "/signin"
+		// return redirectResponse(url)
 	}
 
 	return NextResponse.next()

@@ -9,6 +9,7 @@ import React from "react"
 import { Appbar, Footer, Seo } from "@/components/shared"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { social_links } from "@/config"
 import { sermons } from "@/mock"
 import {
 	Dialog,
@@ -198,6 +199,9 @@ export default function Home() {
 							</button>
 						)}
 					</div>
+					<Link href="/teachings" className="link black font-medium">
+						See more
+					</Link>
 				</section>
 				<section className="h-[700px] w-full bg-black/45 bg-hero bg-cover bg-center py-10 bg-blend-saturation lg:py-20">
 					<div className="container mx-auto flex h-full flex-col justify-center gap-10 text-white">
@@ -215,13 +219,44 @@ export default function Home() {
 						<div className="flex w-full flex-col justify-center gap-3">
 							<p className="font-medium lg:text-2xl">Reach out to us</p>
 							<h2 className="w-full font-light lg:text-6xl">
-								Do you have a prayer request, need conuselling or want to share a testimony?
+								Do you have a prayer request, need counselling or want to share a testimony?
 							</h2>
 							<Link href="/contact" className="link black font-medium">
 								Reach out
 							</Link>
 						</div>
 						<div className="aspect-[3/2] w-full border border-black"></div>
+					</div>
+				</section>
+				<section className="container mx-auto grid grid-cols-1 gap-10 py-10 lg:grid-cols-2 lg:py-20">
+					<div className="relative aspect-[3/2] w-full">
+						<Image
+							src="/assets/images/oga-2.webp"
+							alt="crowd"
+							fill
+							sizes="(max-width:1024px)100%"
+							className="transition-all duration-500 group-hover:scale-105 group-hover:saturate-150"
+						/>
+					</div>
+					<div className="flex w-full flex-col justify-center gap-6">
+						<p className="font-medium lg:text-2xl">Catch up with the</p>
+						<h2 className="font-light lg:text-6xl">
+							Watch the latest sermons and teachings of the man of God anyhwere you are, anytime.
+						</h2>
+						<div className="flex items-center gap-5">
+							{social_links.map(({ icon: Icon, url }, index) => (
+								<a
+									key={index}
+									href={url}
+									target="_blank"
+									className="transition-all hover:scale-110">
+									<Icon size={32} />
+								</a>
+							))}
+						</div>
+						<Link href="/media" className="link black font-medium">
+							See videos
+						</Link>
 					</div>
 				</section>
 				<section className="flex w-full flex-col items-center gap-10 py-10 text-center lg:py-20">

@@ -3,7 +3,7 @@ import React from "react"
 
 import { Appbar, Footer, Seo } from "@/components/shared"
 
-const Page = () => {
+export default function Page() {
 	return (
 		<>
 			<Seo title="Ekunola Davies" />
@@ -51,5 +51,3 @@ const Page = () => {
 		</>
 	)
 }
-
-export default Page

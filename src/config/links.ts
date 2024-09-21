@@ -37,33 +37,47 @@ export const footer_links = [
 	{
 		label: "The Ministry",
 		links: [
-			{ name: "about us", url: "/about" },
-			{ name: "programs", url: "/programs" },
-			{ name: "bible school", url: "/bible-school" },
-			{ name: "", url: "" },
-		],
-	},
-	{
-		label: "Support",
-		links: [
-			{ name: "contact us", url: "/contact" },
-			{ name: "prayer request", url: "/prayer-request" },
-			{ name: "counselling", url: "/counselling" },
+			{ external: false, name: "about us", url: "/about" },
+			{ external: false, name: "programs", url: "/programs" },
+			{ external: false, name: "bible school", url: "/bible-school" },
+			{ external: false, name: "contact us", url: "/contact" },
 		],
 	},
 	{
 		label: "Resources",
 		links: [
-			{ name: "teachings", url: "/teachings" },
-			{ name: "media resources", url: "/media" },
-			{ name: "testimonies", url: "/testimonies" },
+			{ external: false, name: "teachings", url: "/teachings" },
+			{ external: false, name: "media", url: "/media" },
 		],
 	},
 	{
-		label: "Legal",
+		label: "Socials",
 		links: [
-			{ name: "terms of use", url: "/terms-of-use" },
-			{ name: "privacy policy", url: "/privacy-policy" },
+			{
+				external: true,
+				name: "facebook",
+				url: "https://facebook.com/@genesisteamintl",
+			},
+			{
+				external: true,
+				name: "facebook",
+				url: "https://facebook.com/@ekunoladaviesministryintl",
+			},
+			{
+				external: true,
+				name: "instagram",
+				url: "https://instagram.com/genesisteamintl",
+			},
+			{
+				external: true,
+				name: "tiktok",
+				url: "https://tiktok.com/@ekunoladaviesministry",
+			},
+			{
+				external: true,
+				name: "youtube",
+				url: "https://youtube.com/@ekunoladaviesministryintl",
+			},
 		],
 	},
 ]

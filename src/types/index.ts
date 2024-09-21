@@ -51,16 +51,18 @@ export type Node = {
 	updatedAt: Date | string
 }
 
-export type ContentProps = {
-	html: string
-	markdown: string
+export type UserProps = Node & {
+	__typename?: "User"
+	email: string
+	name: string
+	role: "superadmin" | "admin"
+	username: string
+	status: "active" | "inactive"
 }
 
 export type SeriesProps = Node & {
 	__typename?: "Series"
-	cover: string
 	description: string
-	series: Array<TeachingProps>
 	slug: string
 	title: string
 }
@@ -69,59 +71,47 @@ export type FeedProps = Node & {
 	__typename?: "Feed"
 }
 
-export type AudioProps = Node & {
-	__typename?: "Audio"
-	thumbnail: string
-	title: string
-	url: string
-}
-
-export type VideoProps = Node & {
-	__typename?: "Video"
-	thumbnail: string
-	title: string
-	url: string
-}
-
 export type TeachingProps = Node & {
 	__typename?: "Teaching"
-	brief: string
-	content: ContentProps
+	comments: number
+	content: string
 	cover: string
 	isSeries: boolean
+	likes: number
 	series: Maybe<SeriesProps>
 	slug: string
+	status: "published" | "draft" | "archived"
 	tags: Array<string>
-	thumbnail: string
+	title: string
+	views: number
+}
+
+export type NewsletterProps = Node & {
+	__typename?: "Newsletter"
+	content: string
+	cover: string
+	slug: string
+	status: "published" | "draft" | "archived"
+	subtitle: string
 	title: string
 }
 
 export type MediaProps = Node & {
 	__typename?: "Media"
-	brief: string
-	content: AudioProps | VideoProps
+	content: string
 	cover: string
 	isSeries: boolean
 	series: Maybe<SeriesProps>
 	slug: string
 	tags: Array<string>
-	thumbnail: string
+	status: "published" | "draft" | "archived"
 	title: string
 }
 
 export type TestimonyProps = Node & {
 	__typename?: "Testimony"
-	content: ContentProps
+	content: string
 	email: string
 	location: string
 	name: string
-}
-
-export type CarouselItemProps = {
-	__typename?: "CarouselItem"
-	description: string
-	image: string
-	location: string
-	time: string
-	title: string
 }

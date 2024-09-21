@@ -1,8 +1,13 @@
 import Cookies from "js-cookie"
 import axios from "axios"
 
+const baseURL = process.env.NEXT_PUBLIC_API_URL
+
 const newAxiosInstance = () => {
-	let instance = axios.create()
+	let instance = axios.create({
+		baseURL,
+		withCredentials: true,
+	})
 
 	instance.interceptors.request.use((config) => {
 		const token = Cookies.get("EDMI_AUTH_TOKEN")
@@ -13,4 +18,6 @@ const newAxiosInstance = () => {
 	return instance
 }
 
-export const instance = newAxiosInstance()
+const instance = newAxiosInstance()
+
+export { instance as axios }

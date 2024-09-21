@@ -1,5 +1,4 @@
 export * from "./appbar"
-export * from "./carousel"
 export * from "./editor"
 export * from "./footer"
 export * from "./pagination"

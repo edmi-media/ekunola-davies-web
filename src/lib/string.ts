@@ -1,3 +1,11 @@
+import DOMPurify from "isomorphic-dompurify"
+
+export const sanitizeHtml = (html: string) => {
+	return {
+		__html: DOMPurify.sanitize(html),
+	}
+}
+
 export const capitalize = (value: string) =>
 	value.charAt(0).toUpperCase() + value.slice(1)
 

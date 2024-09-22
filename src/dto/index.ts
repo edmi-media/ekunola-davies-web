@@ -39,3 +39,12 @@ export interface CreateMediaDto {
 	tags: Array<string>
 	title: string
 }
+
+export interface ContactFormDto {
+	country: string
+	email: string
+	message: string
+	name: string
+	phone: string
+	subject: string
+}

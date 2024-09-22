@@ -61,10 +61,12 @@ html {
 }
 
 body {
-	background: #b7f5f6;
-	color: var();
+	background-color: #b7f5f6;
+	background-image: url(/assets/images/noise.png);
+	background-position: 0 0;
+	background-size: 200px 200px;
+	color: var(--neutral-900);
 	overflow-x: hidden;
-	user-select: none;
 	width: 100%;
 	transition: colors 0.75s cubic-bezier(0.215, 0.61, 0.355, 1);
 	-webkit-transition: colors 0.75s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -118,6 +120,12 @@ input[type="search"]::-webkit-search-results-decoration {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+}
+
+label {
+	color: var(--neutral-800);
+	font-size: 14px;
+	font-weight: 500;
 }
 
 .link {
@@ -249,4 +257,14 @@ input[type="search"]::-webkit-search-results-decoration {
 .editor .text-highlight {
 	background-color: yellow;
 	color: var(--neutral-900);
+}
+
+.html-content {
+	line-height: 1.5;
+	font-size: 17px;
+}
+
+.html-content a {
+	font-weight: 600;
+	text-decoration: underline;
 }

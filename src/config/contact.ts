@@ -25,6 +25,6 @@ export const contact = [
 		label: "Send a message",
 		content: "Mon-Fri from 9am-4pm",
 		icon: RiMessage3Line,
-		links: [{ url: "wa.me/+2348055555784", text: "Send a message" }],
+		links: [{ url: "https://wa.me/+2348055555784", text: "Send a message" }],
 	},
 ]

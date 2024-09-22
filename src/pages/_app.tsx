@@ -4,6 +4,7 @@ import { useEffect } from "react"
 
 import { QueryQrovider, SSRPRovider } from "@/components/providers"
 import { Toaster } from "@/components/ui/sonner"
+import { Loader } from "@/components/shared"
 import "@/styles/globals.css"
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -23,6 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<QueryQrovider>
 			<SSRPRovider>
+				<Loader />
 				<Component {...pageProps} />
 				<Toaster position="top-right" />
 			</SSRPRovider>

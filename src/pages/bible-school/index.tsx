@@ -10,7 +10,7 @@ export default function Page() {
 			<main className="w-full bg-primary-teal/30">
 				<div className="grid h-[50vh] w-full place-items-center bg-black/50 bg-auditorium-1 bg-cover bg-center bg-blend-overlay">
 					<div className="flex flex-col items-center justify-between gap-6">
-						<h2 className="text-7xl font-extrabold text-white">
+						<h2 className="text-center text-5xl font-extrabold text-white lg:text-7xl">
 							Word & Vision School of Ministry
 						</h2>
 					</div>

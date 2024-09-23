@@ -24,7 +24,7 @@ export default function Page() {
 			<main className="w-full bg-primary-teal/30">
 				<div className="grid h-[50vh] w-full place-items-center bg-black/50 bg-auditorium-1 bg-cover bg-center bg-blend-overlay">
 					<div className="flex flex-col items-center justify-between gap-6">
-						<h2 className="text-7xl font-extrabold text-white">Programs</h2>
+						<h2 className="text-5xl font-extrabold text-white lg:text-7xl">Programs</h2>
 					</div>
 				</div>
 				<section className="container mx-auto flex flex-col items-center py-10 lg:py-20">

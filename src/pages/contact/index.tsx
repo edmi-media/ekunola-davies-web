@@ -46,7 +46,7 @@ export default function Page() {
 			<main className="w-full bg-primary-teal/30">
 				<div className="grid h-[50vh] w-full place-items-center bg-black/50 bg-auditorium-1 bg-cover bg-center bg-blend-overlay">
 					<div className="flex flex-col items-center justify-between gap-6">
-						<h2 className="text-7xl font-extrabold text-white">Contact Us</h2>
+						<h2 className="text-5xl font-extrabold text-white lg:text-7xl">Contact Us</h2>
 					</div>
 				</div>
 				<section className="container mx-auto flex flex-col items-center gap-6 px-4 py-10 lg:px-0 lg:py-20">
@@ -81,8 +81,8 @@ export default function Page() {
 				</section>
 				<section className="mx-auto flex w-full place-items-center bg-white px-4 py-10 lg:px-0 lg:py-20">
 					<div className="container mx-auto flex flex-col items-center gap-6">
-						<div className="flex flex-col items-center text-center">
-							<h3 className="font-semibold lg:text-3xl">Reach out to us</h3>
+						<div className="flex w-full flex-col items-center text-center">
+							<h3 className="text-xl font-semibold lg:text-3xl">Reach out to us</h3>
 							<p className="font-medium lg:text-lg">
 								Let us know how we can help. Someone would typically respond within 48 hours
 							</p>

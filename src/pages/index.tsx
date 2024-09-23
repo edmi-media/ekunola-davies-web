@@ -72,14 +72,14 @@ export default function Home() {
 			<main className="w-full bg-primary-teal/30">
 				<div className="relative h-screen w-full">
 					<div className="absolute left-0 top-0 !z-[2] h-full w-full bg-black/40">
-						<div className="container mx-auto flex h-full flex-col justify-end py-40">
+						<div className="container mx-auto flex h-full flex-col justify-center py-40 lg:justify-end">
 							<div className="flex w-full flex-col items-center gap-6 text-center">
 								<div className="w-full overflow-hidden lg:h-[256px]">
-									<h1 className="font-light text-white lg:text-9xl">
+									<h1 className="text-5xl font-light text-white lg:text-9xl">
 										Teaching • Revival • Deliverance
 									</h1>
 								</div>
-								<p className="max-w-[50%] font-medium text-neutral-300 lg:text-2xl">
+								<p className="w-4/5 font-medium text-neutral-300 lg:max-w-[50%] lg:text-2xl">
 									Winning souls and reviving God&apos;s people to take the great commission
 									serious.
 								</p>
@@ -93,10 +93,10 @@ export default function Home() {
 						loop
 						className="h-screen w-full object-cover"></video>
 				</div>
-				<section className="container mx-auto grid grid-cols-1 gap-10 py-10 lg:grid-cols-2 lg:py-20">
+				<section className="container mx-auto grid grid-cols-1 gap-10 px-4 py-10 lg:grid-cols-2 lg:px-0 lg:py-20">
 					<div className="flex w-full flex-col justify-center gap-6">
 						<p className="font-medium lg:text-2xl">Raising champions for Christ</p>
-						<h2 className="font-light lg:text-6xl">
+						<h2 className="text-3xl font-light lg:text-6xl">
 							A vision for our time. A message to the world. Winning souls. Bringing people to
 							Christ. One soul at a time.
 						</h2>
@@ -114,7 +114,7 @@ export default function Home() {
 						/>
 					</div>
 				</section>
-				<section className="container mx-auto grid grid-cols-1 gap-10 py-10 lg:grid-cols-2 lg:py-20">
+				<section className="container mx-auto grid grid-cols-1 gap-10 px-4 py-10 lg:grid-cols-2 lg:px-0 lg:py-20">
 					<div className="group relative aspect-[3/2] w-full overflow-hidden">
 						<Image
 							src="/assets/images/crowd.webp"
@@ -126,7 +126,7 @@ export default function Home() {
 					</div>
 					<div className="flex w-full flex-col justify-center gap-6">
 						<p className="font-medium lg:text-2xl">Worship with us</p>
-						<h2 className="font-light lg:text-6xl">
+						<h2 className="text-3xl font-light lg:text-6xl">
 							Join us for Moment of Grace & Business breakthough every Thursdays at 8am
 						</h2>
 						<div className="flex items-center gap-6">
@@ -136,7 +136,7 @@ export default function Home() {
 										Add to Calendar
 									</Button>
 								</DialogTrigger>
-								<DialogContent>
+								<DialogContent className="w-full max-w-[90%] lg:max-w-[400px]">
 									<DialogTitle>Add to Calendar</DialogTitle>
 									<DialogDescription hidden></DialogDescription>
 									<div className="min-h-[400px] w-full"></div>
@@ -148,10 +148,10 @@ export default function Home() {
 						</div>
 					</div>
 				</section>
-				<section className="flex w-full flex-col items-center gap-10 py-10 text-center lg:py-20">
+				<section className="flex w-full flex-col items-center gap-10 px-4 py-10 text-center lg:px-0 lg:py-20">
 					<div className="flex flex-col items-center gap-3">
 						<p className="font-medium lg:text-2xl">Meditate on the Word</p>
-						<h2 className="w-full font-light lg:max-w-[60%] lg:text-6xl">
+						<h2 className="w-full text-3xl font-light lg:max-w-[60%] lg:text-6xl">
 							Read excerpts from the ministrations of the man of God
 						</h2>
 					</div>
@@ -203,22 +203,22 @@ export default function Home() {
 						See more
 					</Link>
 				</section>
-				<section className="h-[700px] w-full bg-black/45 bg-hero bg-cover bg-center py-10 bg-blend-saturation lg:py-20">
+				<section className="h-[700px] w-full bg-black/45 bg-hero bg-cover bg-center px-4 py-10 bg-blend-saturation lg:px-0 lg:py-20">
 					<div className="container mx-auto flex h-full flex-col justify-center gap-10 text-white">
 						<div>
-							<p className="font-semibold lg:text-2xl">Prophetic Evangelist</p>
-							<h2 className="font-light lg:text-8xl">Ekunola Davies</h2>
+							<p className="text-xl font-semibold lg:text-2xl">Prophetic Evangelist</p>
+							<h2 className="text-4xl font-light lg:text-8xl">Ekunola Davies</h2>
 						</div>
 						<Link href="/ekunola-davies" className="link white font-medium">
 							Learn more
 						</Link>
 					</div>
 				</section>
-				<section className="w-full bg-white py-10 lg:py-20">
+				<section className="w-full bg-white px-4 py-10 lg:px-0 lg:py-20">
 					<div className="container mx-auto grid grid-cols-1 gap-10 lg:grid-cols-2">
 						<div className="flex w-full flex-col justify-center gap-3">
 							<p className="font-medium lg:text-2xl">Reach out to us</p>
-							<h2 className="w-full font-light lg:text-6xl">
+							<h2 className="w-full text-3xl font-light lg:text-6xl">
 								Do you have a prayer request, need counselling or want to share a testimony?
 							</h2>
 							<Link href="/contact" className="link black font-medium">
@@ -228,7 +228,7 @@ export default function Home() {
 						<div className="aspect-[3/2] w-full border border-black"></div>
 					</div>
 				</section>
-				<section className="container mx-auto grid grid-cols-1 gap-10 py-10 lg:grid-cols-2 lg:py-20">
+				<section className="container mx-auto grid grid-cols-1 gap-10 px-4 py-10 lg:grid-cols-2 lg:px-0 lg:py-20">
 					<div className="relative aspect-[3/2] w-full">
 						<Image
 							src="/assets/images/oga-2.webp"
@@ -240,7 +240,7 @@ export default function Home() {
 					</div>
 					<div className="flex w-full flex-col justify-center gap-6">
 						<p className="font-medium lg:text-2xl">Catch up with the</p>
-						<h2 className="font-light lg:text-6xl">
+						<h2 className="text-3xl font-light lg:text-6xl">
 							Watch the latest sermons and teachings of the man of God anyhwere you are, anytime.
 						</h2>
 						<div className="flex items-center gap-5">
@@ -259,14 +259,16 @@ export default function Home() {
 						</Link>
 					</div>
 				</section>
-				<section className="flex w-full flex-col items-center gap-10 py-10 text-center lg:py-20">
+				<section className="flex w-full flex-col items-center gap-10 px-4 py-10 text-center lg:px-0 lg:py-20">
 					<div className="flex flex-col items-center gap-3">
 						<p className="font-medium lg:text-2xl">Subscribe to our newsletter</p>
-						<h2 className="w-full font-light lg:max-w-[60%] lg:text-6xl">
+						<h2 className="w-full text-3xl font-light lg:max-w-[60%] lg:text-6xl">
 							Get the monthly scriptural reading, prayer points and more.
 						</h2>
 					</div>
-					<form onSubmit={handleSubmit} className="flex items-center gap-6">
+					<form
+						onSubmit={handleSubmit}
+						className="flex flex-col items-center gap-6 lg:flex-row">
 						<Input
 							type="email"
 							value={email}

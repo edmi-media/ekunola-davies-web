@@ -7,7 +7,7 @@ import { footer_links } from "@/config"
 
 export const Footer = () => {
 	return (
-		<footer className="w-screen bg-neutral-900 py-10 text-neutral-100">
+		<footer className="w-screen bg-neutral-900 px-4 py-10 text-neutral-100 lg:px-0">
 			<div className="container mx-auto flex flex-col">
 				<div className="flex w-full flex-wrap items-center gap-5 py-10 lg:gap-20">
 					<div className="flex w-full flex-col gap-5 lg:max-w-[450px]">

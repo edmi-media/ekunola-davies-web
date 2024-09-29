@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import React from "react"
 
+import { useUserStore } from "@/store/z-stores"
 import { useAppHeader } from "./app-header"
 import { LogoDark } from "@/assets/images"
 import { dashboard_links } from "@/config"
@@ -20,6 +21,7 @@ import {
 export const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
 	const [open, setOpen] = React.useState(false)
 	const { pathname } = useRouter()
+	const { user } = useUserStore()
 
 	const isOnRoute = (route: string) => route === normalized(pathname)
 	return (
@@ -83,6 +85,13 @@ export const DashboardLayout = ({ children }: { children: React.ReactNode }) => 
 						<Button size="icon" variant="outline">
 							<RiNotification3Line size={20} />
 						</Button>
+						<div className="flex items-center gap-2">
+							<div className="size-10 rounded-full border"></div>
+							<div className="flex flex-col">
+								<p className="font-heading">{user?.name}</p>
+								<p className="text-xs text-neutral-400">{user?.email}</p>
+							</div>
+						</div>
 					</div>
 				</nav>
 				<div className="h-[calc(100vh-80px)] w-full">{children}</div>

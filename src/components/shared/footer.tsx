@@ -22,10 +22,10 @@ export const Footer = () => {
 							</p>
 						</div>
 					</div>
-					<div className="flex w-full flex-1 flex-wrap items-start justify-between">
+					<div className="flex w-full flex-1 flex-wrap items-start justify-between gap-10 lg:gap-0">
 						{footer_links.map((item, index) => (
-							<div key={index} className="flex flex-1 flex-col gap-4">
-								<h5 className="text-sm font-semibold uppercase">{item.label}</h5>
+							<div key={index} className="flex min-w-[250px] flex-1 flex-col gap-4">
+								<h5 className="text-sm font-semibold uppercase lg:text-base">{item.label}</h5>
 								<div className="flex flex-col gap-2">
 									{item.links.map((link, index) => {
 										if (link.external) {
@@ -35,7 +35,7 @@ export const Footer = () => {
 													href={link.url}
 													target="_blank"
 													rel="noopener noreferrer"
-													className="link white text-lg capitalize text-white">
+													className="link white text-sm capitalize text-white lg:text-lg">
 													{link.name}
 												</a>
 											)
@@ -44,7 +44,7 @@ export const Footer = () => {
 												<Link
 													key={index}
 													href={link.url}
-													className="link white text-lg capitalize text-white">
+													className="link white text-base capitalize text-white lg:text-lg">
 													{link.name}
 												</Link>
 											)

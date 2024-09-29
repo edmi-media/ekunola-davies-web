@@ -27,13 +27,13 @@ export default function Page() {
 						<h2 className="text-5xl font-extrabold text-white lg:text-7xl">Programs</h2>
 					</div>
 				</div>
-				<section className="container mx-auto flex flex-col items-center py-10 lg:py-20">
+				<section className="container mx-auto flex flex-col items-center px-4 py-10 lg:px-0 lg:py-20">
 					<div className="mb-10 flex items-center rounded-md border border-black p-1">
 						{tabs.map((tab, index) => (
 							<button
 								key={index}
 								onClick={() => setCurrentTab(tab)}
-								className={`flex min-w-[100px] items-center justify-center rounded-md px-3 py-2 font-medium capitalize transition-all duration-500 ${tab === currentTab ? "bg-black text-white" : ""}`}>
+								className={`flex min-w-[70px] items-center justify-center rounded-md px-3 py-2 text-sm font-medium capitalize transition-all duration-500 lg:min-w-[100px] lg:text-base ${tab === currentTab ? "bg-black text-white" : ""}`}>
 								{tab}
 							</button>
 						))}
@@ -55,7 +55,7 @@ export default function Page() {
 									/>
 								</div>
 								<div className="flex w-full flex-col items-center gap-4 text-center">
-									<h2 className="w-full font-light lg:text-5xl">{program.title}</h2>
+									<h2 className="w-full text-3xl font-light lg:text-5xl">{program.title}</h2>
 									<p className="font-medium lg:max-w-[75%] lg:text-xl">{program.description}</p>
 									<div>
 										<p className="font-medium lg:text-lg">{program.location}</p>

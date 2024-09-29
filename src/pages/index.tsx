@@ -250,7 +250,7 @@ export default function Home() {
 									href={url}
 									target="_blank"
 									className="transition-all hover:scale-110">
-									<Icon size={32} />
+									<Icon className="size-5 lg:size-8" />
 								</a>
 							))}
 						</div>

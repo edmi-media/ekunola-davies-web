@@ -15,11 +15,11 @@ const initialState: UserStore = {
 	signOut: () => {},
 }
 
-const useUserStore = createPersistMiddleware<UserStore>("spaceet-user", (set) => ({
+const useUserStore = createPersistMiddleware<UserStore>("edmi-admin", (set) => ({
 	...initialState,
 	signIn: (user, token) => {
 		set({ user })
-		Cookies.set("SPACEET_TOKEN", token, {
+		Cookies.set("EDMI_AUTH_TOKEN", token, {
 			sameSite: "None",
 			secure: true,
 			expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30) /* 30 days */,
@@ -31,12 +31,12 @@ const useUserStore = createPersistMiddleware<UserStore>("spaceet-user", (set) =>
 				set({ user: null })
 			} else {
 				set({ user: null })
-				Cookies.remove("SPACEET_TOKEN")
+				Cookies.remove("EDMI_AUTH_TOKEN")
 			}
 		} catch (error) {
 			console.error("sign out error:", error)
 		} finally {
-			window.localStorage.removeItem("spaceet-user")
+			window.localStorage.removeItem("edmi-admin")
 			window.location.replace(options?.redirectTo || "/signin")
 		}
 	},

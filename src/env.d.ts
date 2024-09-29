@@ -1,4 +1,5 @@
 const requiredEnvs = [
+	"API_URL",
 	"NEXT_PUBLIC_TESTING",
 	"NEXT_PUBLIC_API_URL",
 	"NEXT_PUBLIC_GA_ID",
@@ -10,6 +11,7 @@ type RequiredEnvs = (typeof requiredEnvs)[number]
 declare global {
 	namespace NodeJS {
 		interface ProcessEnv extends Record<RequiredEnvs, string> {
+			readonly API_URL: string
 			readonly NEXT_PUBLIC_TESTING: string
 			readonly NEXT_PUBLIC_API_URL: string
 			readonly NEXT_PUBLIC_GA_ID: string

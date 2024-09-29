@@ -25,7 +25,7 @@ export function middleware(req: NextRequest) {
 	// Redirect users without a token trying to access any dashboard/* path
 	if (!hasToken && url.pathname.startsWith("/dashboard")) {
 		url.pathname = "/signin"
-		// return redirectResponse(url)
+		return redirectResponse(url)
 	}
 
 	return NextResponse.next()

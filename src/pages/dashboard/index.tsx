@@ -1,15 +1,20 @@
 import React from "react"
 
 import { DashboardLayout } from "@/components/layouts"
+import { useUserStore } from "@/store/z-stores"
 import { Seo } from "@/components/shared"
 
 const Dashboard = () => {
+	const { user } = useUserStore()
+
 	return (
 		<>
 			<Seo title="Dashboard" />
 			<DashboardLayout>
 				<div className="flex h-full w-full flex-col gap-6 overflow-y-scroll p-5">
-					<h1 className="text-3xl">Welcome back, Mike</h1>
+					<h1 className="text-3xl">
+						Welcome back, <b className="capitalize">{user?.name.split(" ")[1]}</b>
+					</h1>
 					<div className="flex w-full flex-col gap-4">
 						<div className="flex w-full items-center justify-between">
 							<p>Overview</p>

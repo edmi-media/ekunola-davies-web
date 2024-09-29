@@ -22,8 +22,11 @@ export type HttpError = {
 	__typename?: "HttpError"
 	response: {
 		data: {
-			error: boolean
+			code: string
+			error: string
 			message: string
+			status: string
+			success: boolean
 		}
 	}
 }
@@ -31,8 +34,9 @@ export type HttpError = {
 export type HttpResponse<T> = {
 	__typename?: "HttpResponse"
 	data: T
-	error: boolean
 	message: string
+	status: string
+	success: boolean
 }
 
 export type Pagination<T> = {

@@ -1,12 +1,17 @@
 import { RiArrowLeftSLine } from "@remixicon/react"
+import { useMutation } from "@tanstack/react-query"
 import { useRouter } from "next/router"
 import { useFormik } from "formik"
+import { toast } from "sonner"
 import React from "react"
 
 import { DashboardLayout } from "@/components/layouts"
+import { queryClient } from "@/components/providers"
+import { Seo, Spinner } from "@/components/shared"
 import { Button } from "@/components/ui/button"
+import { CreateAdminMutation } from "@/queries"
 import { Input } from "@/components/ui/input"
-import { Seo } from "@/components/shared"
+import { CreateAdminDto } from "@/dto"
 import {
 	Select,
 	SelectContent,
@@ -15,21 +20,36 @@ import {
 	SelectValue,
 } from "@/components/ui/select"
 
-const initialValues = {
+const initialValues: CreateAdminDto = {
 	email: "",
 	name: "",
 	password: "",
-	role: "",
+	role: "admin",
 	username: "",
 }
 
 const Dashboard = () => {
 	const router = useRouter()
 
+	const { isPending, mutateAsync } = useMutation({
+		mutationFn: (payload: CreateAdminDto) => CreateAdminMutation(payload),
+		mutationKey: ["create-user"],
+		onSuccess: ({ message }) => {
+			toast.success(message)
+			router.push("/dashboard/admins").then(() => {
+				queryClient.invalidateQueries({ queryKey: ["get-admins"] })
+			})
+		},
+		onError: (error) => {
+			console.error(error)
+		},
+	})
+
 	const { handleChange, handleSubmit, setFieldValue, values } = useFormik({
 		initialValues,
 		onSubmit: (values) => {
 			console.log(values)
+			mutateAsync(values)
 		},
 	})
 
@@ -55,6 +75,7 @@ const Dashboard = () => {
 						/>
 						<Input label="Email" name="email" onChange={handleChange} placeholder="Email" />
 						<Input
+							type="password"
 							label="Password"
 							name="password"
 							onChange={handleChange}
@@ -69,7 +90,7 @@ const Dashboard = () => {
 								<SelectItem value="superadmin">Super Admin</SelectItem>
 							</SelectContent>
 						</Select>
-						<Button type="submit">Submit</Button>
+						<Button type="submit">{isPending ? <Spinner /> : "Submit"}</Button>
 					</form>
 				</div>
 			</DashboardLayout>

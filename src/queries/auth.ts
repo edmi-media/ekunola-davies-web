@@ -26,11 +26,15 @@ const SignInMutation = async (payload: SignInDto) => {
 }
 
 const GetAllAdminsQuery = async () => {
-	return axios.get<HttpResponse<UserProps[]>>(endpoints().users.get_all).then((res) => res.data)
+	return axios
+		.get<HttpResponse<UserProps[]>>(endpoints().users.get_all)
+		.then((res) => res.data)
 }
 
 const GetAdminQuery = async (id: string) => {
-	return axios.get<HttpResponse<UserProps>>(endpoints(id).users.get_one).then((res) => res.data)
+	return axios
+		.get<HttpResponse<UserProps>>(endpoints(id).users.get_one)
+		.then((res) => res.data)
 }
 
 const UpdateAdminMutation = async (id: string, payload: Partial<CreateAdminDto>) => {

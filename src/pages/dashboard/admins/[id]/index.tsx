@@ -7,26 +7,26 @@ import { GetAdminQuery } from "@/queries"
 import { Seo } from "@/components/shared"
 
 const Page = () => {
-  const router = useRouter()
-  const { id } = router.query
+	const router = useRouter()
+	const { id } = router.query
 
-  const { data} = useQuery({
-    queryFn: () => GetAdminQuery(String(id)),
-    queryKey: ["get-admin", id],
-    enabled: !!id,
-  })
+	const { data } = useQuery({
+		queryFn: () => GetAdminQuery(String(id)),
+		queryKey: ["get-admin", id],
+		enabled: !!id,
+	})
 
-  if (!data) return null
-  console.log(data)
+	if (!data) return null
+	console.log(data)
 
-  return (
-    <>
-    <Seo />
-    <DashboardLayout>
-      <div className="w-full h-full"></div>
-    </DashboardLayout>
-    </>
-  )
+	return (
+		<>
+			<Seo />
+			<DashboardLayout>
+				<div className="h-full w-full"></div>
+			</DashboardLayout>
+		</>
+	)
 }
 
 export default Page
